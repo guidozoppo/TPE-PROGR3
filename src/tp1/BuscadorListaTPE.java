@@ -1,25 +1,27 @@
-package tpe;
+package tp1;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 
+import tpe.Lector;
 
-public class BuscadorLista {
+
+public class BuscadorListaTPE {
 
 	private Lector l1;
 	private ArrayList<Libro> libros;
 	private ArrayList<String> generos;
-	private ListaSimple indice;
+	private ListaSimpleTPE indice;
 	
-	public BuscadorLista() {
+	public BuscadorListaTPE() {
 		generos = new ArrayList<>();
 		l1 = new Lector();
-		indice = new ListaSimple();
+		indice = new ListaSimpleTPE();
 		libros = new ArrayList<>();
 	}
 	
 	public void addLibro() {
-		libros = l1.getLibros();
+		//libros = l1.getLibros();
 	}
 	
 	public void printLibros() {
@@ -46,16 +48,16 @@ public class BuscadorLista {
 			indice.insertFront(g);
 		}
 		
-		Iterator<Node> it = indice.iterator();
+		Iterator<NodeTPE> it = indice.iterator();
 		while(it.hasNext()) {
-			Node nxt = it.next();
+			NodeTPE nxt = it.next();
 			nxt.setLibros(getLibrosPorGenero(nxt.getInfo()));
 			System.out.println(nxt.getLibros());
 		}
 		
 	}
 	
-	public ListaSimple getIndice(){
+	public ListaSimpleTPE getIndice(){
 		return indice;
 	}
 /*
@@ -68,8 +70,8 @@ public class BuscadorLista {
 	}*/
 	
 	//ESTRUCTURA LISTA
-	private ListaSimple getLibrosPorGenero(String genero){
-		ListaSimple aux = new ListaSimple();
+	private ListaSimpleTPE getLibrosPorGenero(String genero){
+		ListaSimpleTPE aux = new ListaSimpleTPE();
 		for (Libro l : libros) {
 			if(l.contieneGenero(genero)) {
 				aux.insertFront(l.getTitulo());

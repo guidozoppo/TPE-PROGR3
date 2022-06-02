@@ -1,12 +1,12 @@
-package tpe;
+package tp1;
 
 import java.util.Iterator;
 
-public class MyIterator implements Iterator<Node>{
+public class MyIteratorTPE implements Iterator<NodeTPE>{
 
-	private Node cursor;
+	private NodeTPE cursor;
 	
-	public MyIterator(Node cursor) {
+	public MyIteratorTPE(NodeTPE cursor) {
 		this.cursor = cursor;
 	}
 	
@@ -16,8 +16,8 @@ public class MyIterator implements Iterator<Node>{
 	}
 
 	@Override
-	public Node next() {
-		Node valor = this.cursor;
+	public NodeTPE next() {
+		NodeTPE valor = this.cursor;
 		this.cursor = this.cursor.getNext();
 		return valor;
 	}

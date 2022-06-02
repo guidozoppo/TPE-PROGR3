@@ -1,4 +1,4 @@
-package tpe;
+package tp1;
 
 import java.util.ArrayList;
 
@@ -6,7 +6,7 @@ public class Libro {
 
 	private String titulo, autor;
 	private int cantPaginas;
-	private ArrayList<Genero> generos;
+	private ArrayList<String> generos;
 	
 	public Libro(String titulo, String autor, int cantPaginas) {
 		this.titulo = titulo;
@@ -44,15 +44,15 @@ public class Libro {
 		this.cantPaginas = cantPaginas;
 	}
 
-	public ArrayList<Genero> getGeneros() {
-		return new ArrayList<>(generos);
+	public ArrayList<String> getGeneros() {
+		return generos;
 	}
 
-	public void addGeneros(Genero genero) {
+	public void addGeneros(String genero) {
 		this.generos.add(genero);
 	}
 	
-	public boolean contieneGenero(Genero genero) {
+	public boolean contieneGenero(String genero) {
 		return generos.contains(genero);
 	}
 	

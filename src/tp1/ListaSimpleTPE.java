@@ -1,20 +1,20 @@
-package tpe;
+package tp1;
 
 import java.util.Iterator;
 
-public class ListaSimple implements Iterable<Node>{
+public class ListaSimpleTPE implements Iterable<NodeTPE>{
 
-	private Node first;
+	private NodeTPE first;
 	private int size;
 	
-	public ListaSimple() {
+	public ListaSimpleTPE() {
 		this.first = null;
 		this.size = 0;
 	}
 	
 
 	public void insertFront(String info) {
-		Node tmp = new Node(info,null);
+		NodeTPE tmp = new NodeTPE(info,null);
 		tmp.setNext(this.first);
 		this.first = tmp;
 		size++;
@@ -44,7 +44,7 @@ public class ListaSimple implements Iterable<Node>{
 	public String toString() {
 		String aux = "";
 		int contador = 0;
-		Node tmp = this.first;
+		NodeTPE tmp = this.first;
 		while(contador < this.size) {
 			aux += tmp.toString() + " - ";
 			tmp = tmp.getNext();
@@ -54,8 +54,8 @@ public class ListaSimple implements Iterable<Node>{
 	}
 
 	@Override
-	public Iterator<Node> iterator(){
-		return new MyIterator(this.first);
+	public Iterator<NodeTPE> iterator(){
+		return new MyIteratorTPE(this.first);
 	}
 	
 	/*

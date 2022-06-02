@@ -1,30 +1,30 @@
-	package tpe;
+	package tp1;
 
-public class Node {
+public class NodeTPE {
 	private String info;
-	private Node next;
-	private ListaSimple libros;
+	private NodeTPE next;
+	private ListaSimpleTPE libros;
 
-	public Node() {
+	public NodeTPE() {
 		this.info = null;
 		this.next = null;
 		this.libros = null;
 	}
 	
-	public Node(String info, Node next) {
+	public NodeTPE(String info, NodeTPE next) {
 		this.setInfo(info);
 		this.setNext(next);
 	}
 	
-	public Node getNext() {
+	public NodeTPE getNext() {
 		return next;
 	}
 	
-	public void addListaLibros(ListaSimple lb) {
+	public void addListaLibros(ListaSimpleTPE lb) {
 		libros = lb;
 	}
 
-	public void setNext(Node next) {
+	public void setNext(NodeTPE next) {
 		this.next = next;
 	}
 
@@ -38,11 +38,11 @@ public class Node {
 	
 	
 	
-	public ListaSimple getLibros() {
+	public ListaSimpleTPE getLibros() {
 		return libros;
 	}
 
-	public void setLibros(ListaSimple libros) {
+	public void setLibros(ListaSimpleTPE libros) {
 		this.libros = libros;
 	}
 

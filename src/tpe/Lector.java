@@ -25,8 +25,7 @@ public class Lector {
 	   // Sepapar la linea leída con el separador definido previamente
 	   String[] campos = linea.split(SEPARADOR); 
 	   
-	   //System.out.println(Arrays.toString(campos));
-	  
+	   	  
 	   String titulo = campos[0];
 	   String autor = campos[1];
 	   String paginas = campos[2];
@@ -35,11 +34,11 @@ public class Lector {
 	   
 	   
 	   
-	   if(!paginas.equals("Paginas")) {
+	   if(!paginas.equals("Paginas")) {   //evita imprimir la pagina de las cabeceras
 		 cantPaginas = Integer.parseInt(paginas); 
 	  	  Libro l1 = new Libro(titulo, autor, cantPaginas);
 	  	  for(String g: generos) {
-			   l1.addGeneros(g);
+			   l1.addGeneros(new Genero(g));
 		   }
 	  	  libros.add(l1);
 	   }

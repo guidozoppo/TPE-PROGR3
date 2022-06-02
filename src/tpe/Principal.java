@@ -3,18 +3,16 @@ package tpe;
 public class Principal {
 
 	public static void main(String[] args) {
-		Buscador b1 = new Buscador();
+		Biblioteca b1 = new Biblioteca();
 		b1.addLibro();
-		b1.crearIndice();
-		//System.out.println(b1.getGeneros());
+		b1.crearBusqueda();
+		Genero g1 = new Genero("cine");
+
 		
-		//System.out.println(b1.getLibro("thriller"));
-		//System.out.println(b1.getLibrosPorGenero("cine"));
+		System.out.println(b1.getLibros(g1));
+		Escritor e1 = new Escritor();
+		e1.escribirArchivo(b1.getLibros(g1));
 		
-		BuscadorLista b2 = new BuscadorLista();
-		b2.addLibro();
-		b2.crearIndice();
-		System.out.println(b2.getIndice());
 	}
 
 }
